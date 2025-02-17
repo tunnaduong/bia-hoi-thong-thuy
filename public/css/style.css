@@ -1,0 +1,27 @@
+body {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.banner-top {
+  background: center no-repeat url("/public/images/pic.jpg");
+  font-size: 1.5rem;
+  line-height: 40px;
+  text-shadow: 1px 0 0 #8d0e0e, -1px 0 0 #8d0e0e, 0 1px 0 #8d0e0e,
+    0 -1px 0 #8d0e0e, 1px 1px #8d0e0e, -1px -1px 0 #8d0e0e, 1px -1px 0 #8d0e0e,
+    -1px 1px 0 #8d0e0e;
+}
+
+.intro-img {
+  max-width: 640px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hop-tac {
+  background-color: black;
+  color: #154f28;
+}
