@@ -11,6 +11,8 @@ try {
     // bắt đầu định nghĩa ra các đường dẫn
     $router->get('/', [App\Controllers\HomeController::class, 'index']);
 
+    $router->get('/gioi-thieu', [App\Controllers\HomeController::class, 'about']);
+
 
 
     // khu vực cần quan tâm -----------

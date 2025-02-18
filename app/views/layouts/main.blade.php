@@ -9,7 +9,7 @@
     <h3 class="banner-top mb-0 text-warning text-center py-3">
         ĐẠI LÝ BIA HƠI THÔNG THỦY
     </h3>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-white">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
                 <img src="/public/images/logo.png" alt="Logo">
@@ -25,16 +25,16 @@
                         <a class="nav-link {{ $home ?? '' }}" aria-current="page" href="/">TRANG CHỦ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/gioi-thieu">GIỚI THIỆU</a>
+                        <a class="nav-link {{ $about ?? '' }}" href="/gioi-thieu">GIỚI THIỆU</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/san-pham">SẢN PHẨM</a>
+                        <a class="nav-link {{ $product ?? '' }}" href="/san-pham">SẢN PHẨM</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/tin-tuc">TIN TỨC</a>
+                        <a class="nav-link {{ $news ?? '' }}" href="/tin-tuc">TIN TỨC</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/lien-he">LIÊN HỆ</a>
+                        <a class="nav-link {{ $contact ?? '' }}" href="/lien-he">LIÊN HỆ</a>
                     </li>
                 </ul>
             </div>
@@ -319,6 +319,7 @@
         </div>
     </section>
     <script src='/public/bootstrap/bootstrap.min.js'></script>
+    <script src='/public/js/script.js'></script>
 </body>
 
 </html>
