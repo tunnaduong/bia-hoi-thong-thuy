@@ -65,7 +65,7 @@
     </div>
     @yield('content')
     <section class="py-5 px-3 hop-tac">
-        <div class="text-center bg-light py-5 rounded">
+        <div class="text-center bg-light py-5 rounded" style="opacity: 0.9">
             <h2 class="fw-bold">CƠ <span class="border-bottom border-warning border-3 pb-3">CHẾ HỢP</span> TÁC</h2>
             <div class="mt-5">
                 <i class="fa fa-handshake-o fs-1" aria-hidden="true"></i>
