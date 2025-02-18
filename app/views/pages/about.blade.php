@@ -1,14 +1,14 @@
 @extends('layouts.main', ['about' => 'active'])
 
 @section('content')
-    <section class="row py-3">
-        <div class="col-12 d-flex align-items-center">
+    <section class="py-3">
+        <div class="d-flex align-items-center">
             <ol class="breadcrumb flex-grow-1 m-0 ms-2">
                 <li class="breadcrumb-item fw-bold"><a href="/">Trang chủ</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Giới thiệu</li>
             </ol>
             <div class="small">
-                <span id="clock" class="small pe-2 me-2"></span>
+                <span id="clock" class="small me-3"></span>
             </div>
             <script>
                 common.clock(true, 'clock')

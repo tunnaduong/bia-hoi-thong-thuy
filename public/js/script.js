@@ -38,8 +38,7 @@ var common = {
       " | " +
       (hour >= 10 ? hour : "0" + hour) +
       ":" +
-      (minute >= 10 ? minute : "0" + minute) +
-      " GMT+7";
+      (minute >= 10 ? minute : "0" + minute);
     if (id) document.getElementById(id).innerHTML = outStr;
     if (!c) return outStr;
     setTimeout("common.clock(true,'clock')", 1e3);
