@@ -6,6 +6,9 @@
 </head>
 
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v22.0&appId=1087511252159238"></script>
     <h3 class="banner-top mb-0 text-warning text-center py-3">
         ĐẠI LÝ BIA HƠI THÔNG THỦY
     </h3>
@@ -34,7 +37,7 @@
                         <a class="nav-link {{ $news ?? '' }}" href="/tin-tuc">TIN TỨC</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ $contact ?? '' }}" href="/lien-he">LIÊN HỆ</a>
+                        <a class="nav-link {{ $contact ?? '' }}" href="#contact">LIÊN HỆ</a>
                     </li>
                 </ul>
             </div>
@@ -267,8 +270,16 @@
                         <p><a href="/co-che-hop-tac-65.shtml" class="text-white">Cơ chế hợp tác</a></p>
                         <iframe width="100%" height="100%"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d933.6231726850094!2d105.84831945598124!3d20.608765078457722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135cd851a73260d%3A0xbed3016d810fe197!2zTmjDoCBjdW5nIGPhuqVwIGJpYSBoxqFpIEjDoCBO4buZaSBUaMO0bmcgVGh14bu3!5e0!3m2!1svi!2shk!4v1739804320336!5m2!1svi!2shk"
-                            style="border:0;" allowfullscreen="" loading="lazy"
+                            style="border:0;margin-bottom: 15px" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="fb-page" data-href="https://www.facebook.com/biahoihanoithongthuy"
+                            data-tabs="timeline" data-width="" data-height="" data-small-header="false"
+                            data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                            <blockquote cite="https://www.facebook.com/biahoihanoithongthuy"
+                                class="fb-xfbml-parse-ignore"><a
+                                    href="https://www.facebook.com/biahoihanoithongthuy">Đại lý phân phối bia hơi Hà
+                                    Nội Thông Thuỷ</a></blockquote>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12">

@@ -17,8 +17,6 @@ try {
 
     $router->get('/tin-tuc', [App\Controllers\HomeController::class, 'news']);
 
-    $router->get('/lien-he', [App\Controllers\HomeController::class, 'contact']);
-
 
     // khu vực cần quan tâm -----------
     //$router->get('test', [App\Controllers\ProductController::class, 'index']);
