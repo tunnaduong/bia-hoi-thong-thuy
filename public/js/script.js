@@ -85,10 +85,14 @@ var common = {
       .then((response) => response.json())
       .then((res) => {
         document.getElementById("loading").classList.add("d-none");
-        var myModal = bootstrap.Modal.getOrCreateInstance(
-          document.getElementById("exampleModalCenter")
-        );
-        myModal.hide();
+        // check if exampleModalCenter is exist
+        if (document.getElementById("exampleModalCenter")) {
+          var myModal = bootstrap.Modal.getOrCreateInstance(
+            document.getElementById("exampleModalCenter")
+          );
+          myModal.hide();
+        }
+
         Swal.fire({
           title: "Đã gửi!",
           text: "Cảm ơn bạn đã gửi thông tin, chúng tôi sẽ liên hệ lại sớm nhất có thể",
