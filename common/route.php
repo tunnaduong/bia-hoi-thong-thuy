@@ -17,6 +17,7 @@ try {
 
     $router->get('/tin-tuc', [App\Controllers\HomeController::class, 'news']);
 
+    $router->post('/contact/send-info', [App\Controllers\HomeController::class, 'sendMail']);
 
     // khu vực cần quan tâm -----------
     //$router->get('test', [App\Controllers\ProductController::class, 'index']);

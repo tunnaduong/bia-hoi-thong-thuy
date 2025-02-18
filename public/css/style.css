@@ -34,6 +34,81 @@ a {
   font-size: 0.875em;
 }
 
+.click-register {
+  animation: color-change 0.5s infinite;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px 0;
+  display: block;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.loading-page {
+  z-index: 1100;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+.bg-overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0.7;
+}
+
+.sk-flow {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sk-flow .sk-flow-dot:nth-child(1) {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+
+.sk-flow .sk-flow-dot:nth-child(2) {
+  -webkit-animation-delay: -0.15s;
+  animation-delay: -0.15s;
+}
+
+.sk-flow .sk-flow-dot {
+  width: 25%;
+  height: 25%;
+  background-color: #666;
+  border-radius: 50%;
+  animation: sk-flow 1.4s infinite ease-in-out both;
+  z-index: 1;
+}
+
+@keyframes sk-flow {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
 @keyframes call-icon-anim {
   0% {
     transform: rotate(0) scale(1) skew(1deg);
@@ -88,5 +163,24 @@ a {
   100% {
     transform: rotate(0) scale(0.7) skew(1deg);
     opacity: 0.2;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    background: #d71921;
+    color: #fff;
+  }
+
+  50% {
+    background: #13653b;
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    color: white;
+  }
+
+  100% {
+    background: #d71921;
+    color: #fff;
   }
 }

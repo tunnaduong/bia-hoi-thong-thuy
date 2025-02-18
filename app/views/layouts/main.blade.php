@@ -76,8 +76,7 @@
                             bảo
                             quản</strong> chuyên dụng với đầy đủ <strong>van</strong>, <strong>phập</strong>,
                         <strong>bơm</strong>, <strong>vòi rót</strong>, <strong>biển bảng quảng cáo</strong>, <strong>vỏ
-                            bom</strong>, <strong>vỏ keg</strong>, <strong>áo thương hiệu</strong>, <strong>khay bưng
-                            bia</strong>, <strong>cốc tạo bọt</strong>...</span></p>
+                            bom</strong>, <strong>vỏ keg</strong>, <strong>bàn ghế</strong>...</span></p>
             </div>
         </div>
     </section>
@@ -330,6 +329,7 @@
         </div>
     </section>
     <script src='/public/bootstrap/bootstrap.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src='/public/js/script.js'></script>
 </body>
 

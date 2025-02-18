@@ -43,6 +43,65 @@ var common = {
     if (!c) return outStr;
     setTimeout("common.clock(true,'clock')", 1e3);
   },
+  submitForm: function (event) {
+    event.preventDefault();
+    // call api send mail /contact/send-info
+    let name = document.getElementById("ho-va-ten").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("so-dien-thoai").value;
+    let address = document.getElementById("dia-chi").value;
+    let message = document.getElementById("noi-dung").value;
+    let data = {
+      "ho-va-ten": name,
+      email: email,
+      "so-dien-thoai": phone,
+      "dia-chi": address,
+      "noi-dung": message,
+    };
+
+    // check validate
+    if (!name || !phone) {
+      alert("Vui lòng nhập đầy đủ thông tin");
+      return;
+    }
+
+    // phone number validate. 10-11 number, start with 0
+    let phoneRegex = /(0[0-9]{9,10})/;
+    if (!phoneRegex.test(phone)) {
+      alert("Số điện thoại không hợp lệ");
+      return;
+    }
+
+    // show loading overlay, change class from d-none to d-block
+    document.getElementById("loading").classList.remove("d-none");
+
+    fetch("/contact/send-info", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((res) => {
+        document.getElementById("loading").classList.add("d-none");
+        var myModal = bootstrap.Modal.getOrCreateInstance(
+          document.getElementById("exampleModalCenter")
+        );
+        myModal.hide();
+        Swal.fire({
+          title: "Đã gửi!",
+          text: "Cảm ơn bạn đã gửi thông tin, chúng tôi sẽ liên hệ lại sớm nhất có thể",
+          icon: "success",
+        });
+        document.getElementById("form").reset();
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("Gửi thông tin thất bại");
+      });
+    return;
+  },
 };
 
 if (document.getElementById("clock") !== null) common.clock(true, "clock");

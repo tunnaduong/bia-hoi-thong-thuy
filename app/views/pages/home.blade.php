@@ -53,6 +53,55 @@
         <p>Với nhiều năm kinh nghiệm trong lĩnh vực phân phối Bia, chúng tôi mang đến cho khách hàng nhiều sự lựa chọn
             về
             sản phẩm cùng cam kết về chất lượng và giá cả cạnh tranh nhất.</p>
+
+        <button class="click-register" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">CLICK Đăng ký cửa
+            hàng BIA HÀ NỘI ngay</button>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="exampleModalCenter">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title fs-6">ĐĂNG KÝ SETUP CỬA HÀNG BIA HƠI HÀ NỘI NGAY</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <form method="POST" id="form" onsubmit="return common.submitForm(event)">
+                        <div class="modal-body">
+                            <input type="text" class="form-control mb-3" id="ho-va-ten" placeholder="Họ và tên"
+                                name="ho-va-ten" required>
+                            <input type="text" class="form-control mb-3" id="so-dien-thoai" placeholder="Số điện thoại"
+                                name="so-dien-thoai" required>
+                            <input type="email" class="form-control mb-3" id="email" placeholder="Email"
+                                name="email">
+                            <input type="text" class="form-control mb-3" id="dia-chi" placeholder="Địa chỉ"
+                                name="dia-chi">
+                            <textarea name="noi-dung" id="noi-dung" class="form-control" rows="3" placeholder="Nội dung"></textarea>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer justify-content-start">
+                            <button type="submit" class="btn btn-success mr-auto">Gửi yêu
+                                cầu</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading-page d-none" id="loading">
+            <div class="bg-overlay"></div>
+            <div class="sk-flow">
+                <div class="sk-flow-dot"></div>
+                <div class="sk-flow-dot"></div>
+                <div class="sk-flow-dot"></div>
+            </div>
+        </div>
+
+        <img src="/public/images/banner.jpg" alt="Bia hơi" class="w-100 h-100 d-block m-auto mb-4" />
     </section>
     <section class="pt-5 px-3">
         <div class="text-center mb-5">
@@ -118,7 +167,8 @@
                     </div>
                     <div class="col col-md-8 p-4 d-flex flex-column position-static">
                         <h5><a href="/bia-tuoi-ha-noi-dragon-beer-288.html">BIA TƯƠI HÀ NỘI - DRAGON BEER</a></h5>
-                        <p class="fst-italic">Sản phẩm chủ lực của Công ty Cổ phần Bia Rượu Nước giải khát Hưng Yên - Hà Nội
+                        <p class="fst-italic">Sản phẩm chủ lực của Công ty Cổ phần Bia Rượu Nước giải khát Hưng Yên - Hà
+                            Nội
                         </p>
                         <div class="mb-1 text-muted small"><small>2387 xem | Thứ 3, 10/01/2023 | 09:24 GMT+7</small></div>
                         <p class="card-text mb-auto text-end"><a class="fst-italic small"

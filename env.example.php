@@ -5,6 +5,8 @@ const DBUSER = "root";
 const DBPASS = "";
 const DBHOST = "localhost";
 const BASE_URL = "https://bia-hoi-thong-thuy.net/";
+const MAIL_USERNAME = "";
+const MAIL_PASSWORD = "";
 function route($url)
 {
     return BASE_URL . $url;
