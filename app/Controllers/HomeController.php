@@ -28,6 +28,11 @@ class HomeController extends BaseController
         $this->render("pages.news");
     }
 
+    public function contact()
+    {
+        $this->render("pages.contact");
+    }
+
     public function sendMail()
     {
         // send mail using PHPMailer
