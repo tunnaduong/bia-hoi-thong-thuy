@@ -13,6 +13,11 @@ try {
 
     $router->get('/gioi-thieu', [App\Controllers\HomeController::class, 'about']);
 
+    $router->get('/san-pham', [App\Controllers\HomeController::class, 'product']);
+
+    $router->get('/tin-tuc', [App\Controllers\HomeController::class, 'news']);
+
+    $router->get('/lien-he', [App\Controllers\HomeController::class, 'contact']);
 
 
     // khu vực cần quan tâm -----------

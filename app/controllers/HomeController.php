@@ -13,4 +13,19 @@ class HomeController extends BaseController
     {
         $this->render("pages.about");
     }
+
+    public function product()
+    {
+        $this->render("pages.product");
+    }
+
+    public function news()
+    {
+        $this->render("pages.news");
+    }
+
+    public function contact()
+    {
+        $this->render("pages.contact");
+    }
 }
