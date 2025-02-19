@@ -21,6 +21,36 @@ try {
 
     $router->post('/contact/send-info', [App\Controllers\HomeController::class, 'sendMail']);
 
+    $router->get('/admin', [App\Controllers\HomeController::class, 'admin']);
+
+    $router->any('/login', [App\Controllers\HomeController::class, 'login']);
+
+    $router->get("/logout", [App\Controllers\HomeController::class, 'logout']);
+
+    $router->get('/admin/manage/posts', [App\Controllers\PostController::class, 'index']);
+
+    $router->get('/admin/manage/posts/create', [App\Controllers\PostController::class, 'create']);
+
+    $router->post('/admin/manage/posts/store', [App\Controllers\PostController::class, 'store']);
+
+    $router->get('/admin/manage/posts/edit/{id}', [App\Controllers\PostController::class, 'edit']);
+
+    $router->post('/admin/manage/posts/update/{id}', [App\Controllers\PostController::class, 'update']);
+
+    $router->post('/admin/manage/posts/delete/{id}', [App\Controllers\PostController::class, 'delete']);
+
+    $router->get('/admin/manage/products', [App\Controllers\ProductController::class, 'index']);
+
+    $router->get('/admin/manage/products/create', [App\Controllers\ProductController::class, 'create']);
+
+    $router->post('/admin/manage/products/store', [App\Controllers\ProductController::class, 'store']);
+
+    $router->get('/admin/manage/products/edit/{id}', [App\Controllers\ProductController::class, 'edit']);
+
+    $router->post('/admin/manage/products/update/{id}', [App\Controllers\ProductController::class, 'update']);
+
+    $router->post('/admin/manage/products/delete/{id}', [App\Controllers\ProductController::class, 'delete']);
+
 
     // khu vực cần quan tâm -----------
     //$router->get('test', [App\Controllers\ProductController::class, 'index']);

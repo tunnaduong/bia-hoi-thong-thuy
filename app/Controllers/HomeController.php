@@ -33,6 +33,44 @@ class HomeController extends BaseController
         $this->render("pages.contact");
     }
 
+    public function admin()
+    {
+        if (!isset($_SESSION['user'])) {
+            header('Location: /login');
+            exit;
+        }
+        $this->render("admin.index", ['section' => 'home']);
+    }
+
+    public function login()
+    {
+        if (isset($_SESSION['user'])) {
+            header('Location: /admin');
+            exit;
+        }
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $username = $_POST['username'] ?? '';
+            $password = $_POST['password'] ?? '';
+
+            if ($username === 'admin' && $password === 'tunganh2003') {
+                $_SESSION['user'] = [
+                    'username' => $username
+                ];
+                header('Location: /admin');
+                exit;
+            }
+            return $this->render("admin.auth.login", ['error' => 'Tài khoản hoặc mật khẩu không đúng']);
+        }
+        return $this->render("admin.auth.login");
+    }
+
+    public function logout()
+    {
+        unset($_SESSION['user']);
+        header('Location: /login');
+        exit;
+    }
+
     public function sendMail()
     {
         // send mail using PHPMailer
