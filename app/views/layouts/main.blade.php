@@ -289,7 +289,7 @@
                         </div>
                         <div class="d-flex my-4">
                             <div class="me-2">
-                                <img height="80" width="80" alt="Đại lý bia hơi Thông Thủy" class="img-fluid"
+                                <img height="80" width="80" alt="Đại lý bia hơi Thông Thủy"
                                     src="/public/images/qr-code.png">
                             </div>
                             <div>
