@@ -9,7 +9,7 @@
 
     <div class="card">
         <div class="card-body">
-            <form action="/admin/manage/products/store" method="POST">
+            <form action="/admin/manage/products/store" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
                     <input type="text" class="form-control" id="name" name="name" required>

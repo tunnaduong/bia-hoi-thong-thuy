@@ -14,8 +14,10 @@
                 <thead>
                     <tr>
                         <th>ID</th>
+                        <th>Image</th>
                         <th>Name</th>
                         <th>Created At</th>
+                        <th>Updated At</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -23,8 +25,11 @@
                     @foreach ($products as $product)
                         <tr>
                             <td>{{ $product->id }}</td>
+                            <td><img src="{{ asset(json_decode($product->images)[0]) }}" style="width: 120px; height: auto;">
+                            </td>
                             <td>{{ $product->name }}</td>
                             <td>{{ $product->created_at }}</td>
+                            <td>{{ $product->updated_at }}</td>
                             <td>
                                 <a href="/admin/manage/products/edit/{{ $product->id }}"
                                     class="btn btn-sm btn-warning">Edit</a>
