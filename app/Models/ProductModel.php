@@ -18,22 +18,24 @@ class ProductModel extends BaseModel
 
     public function createProduct($data)
     {
-        $this->setQuery("INSERT INTO products (name, short_description, description, created_at) VALUES (?, ?, ?, ?)");
+        $this->setQuery("INSERT INTO products (name, short_description, description, images, created_at) VALUES (?, ?, ?, ?, ?)");
         return $this->execute([
             $data['name'],
             $data['short_description'],
             $data['description'],
+            $data['images'],
             $data['created_at']
         ]);
     }
 
     public function updateProduct($id, $data)
     {
-        $this->setQuery("UPDATE products SET name = ?, short_description = ?, description = ?, updated_at = ? WHERE id = ?");
+        $this->setQuery("UPDATE products SET name = ?, short_description = ?, description = ?, images = ?, updated_at = ? WHERE id = ?");
         return $this->execute([
             $data['name'],
             $data['short_description'],
             $data['description'],
+            $data['images'],
             $data['updated_at'],
             $id
         ]);

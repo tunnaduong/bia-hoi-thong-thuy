@@ -29,10 +29,17 @@ class ProductController extends BaseController
             $description = $_POST['description'] ?? '';
             $short_description = $_POST['short_description'] ?? '';
 
+            // Handle image uploads
+            $imagePaths = [];
+            if (!empty($_FILES['images']['name'][0])) { // Check if files were uploaded
+                $imagePaths = $this->uploadFiles($_FILES['images'], 'products');
+            }
+
             $this->productModel->createProduct([
                 'name' => $name,
                 'description' => $description,
                 'short_description' => $short_description,
+                'images' => json_encode($imagePaths), // Ensure paths are encoded into JSON
                 'created_at' => date('Y-m-d H:i:s')
             ]);
 
@@ -54,10 +61,25 @@ class ProductController extends BaseController
             $description = $_POST['description'] ?? '';
             $short_description = $_POST['short_description'] ?? '';
 
+            $product = $this->productModel->getProductById($id);
+
+            if (!$product) {
+                die('Product not found');
+            }
+
+            // Keep only selected existing images
+            $imagePaths = $_POST['existing_images'] ?? [];
+
+            if (!empty($_FILES['images']['name'][0])) { // Check if new images are uploaded
+                $uploadedPaths = $this->uploadFiles($_FILES['images'], 'products');
+                $imagePaths = array_merge($imagePaths, $uploadedPaths);
+            }
+
             $this->productModel->updateProduct($id, [
                 'name' => $name,
                 'short_description' => $short_description,
                 'description' => $description,
+                'images' => json_encode($imagePaths), // Ensure paths are encoded into JSON
                 'updated_at' => date('Y-m-d H:i:s')
             ]);
 

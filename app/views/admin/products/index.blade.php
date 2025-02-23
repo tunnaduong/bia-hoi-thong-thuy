@@ -15,7 +15,6 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
-                        <th>Mô tả ngắn</th>
                         <th>Created At</th>
                         <th>Actions</th>
                     </tr>
@@ -25,7 +24,6 @@
                         <tr>
                             <td>{{ $product->id }}</td>
                             <td>{{ $product->name }}</td>
-                            <td>{{ $product->short_description }}</td>
                             <td>{{ $product->created_at }}</td>
                             <td>
                                 <a href="/admin/manage/products/edit/{{ $product->id }}"
