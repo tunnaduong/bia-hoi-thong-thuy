@@ -57,41 +57,6 @@
  <button class="click-register" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">CLICK Đăng ký cửa
  hàng BIA HÀ NỘI ngay</button>
 
- <!-- The Modal -->
- <div class="modal fade" id="exampleModalCenter">
- <div class="modal-dialog modal-dialog-centered">
- <div class="modal-content">
-
- <!-- Modal Header -->
- <div class="modal-header">
- <h4 class="modal-title fs-6">ĐĂNG KÝ SETUP CỬA HÀNG BIA HƠI HÀ NỘI NGAY</h4>
- <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
- </div>
-
- <!-- Modal body -->
- <form method="POST" id="form" onsubmit="return common.submitForm(event)">
- <div class="modal-body">
- <input type="text" class="form-control mb-3" id="ho-va-ten" placeholder="Họ và tên"
- name="ho-va-ten" required>
- <input type="text" class="form-control mb-3" id="so-dien-thoai" placeholder="Số điện thoại"
- name="so-dien-thoai" required>
- <input type="email" class="form-control mb-3" id="email" placeholder="Email"
- name="email">
- <input type="text" class="form-control mb-3" id="dia-chi" placeholder="Địa chỉ"
- name="dia-chi">
- <textarea name="noi-dung" id="noi-dung" class="form-control" rows="3" placeholder="Nội dung"></textarea>
- </div>
-
- <!-- Modal footer -->
- <div class="modal-footer justify-content-start">
- <button type="submit" class="btn btn-success mr-auto">Gửi yêu
- cầu</button>
- </div>
- </form>
- </div>
- </div>
- </div>
-
  <div class="loading-page d-none" id="loading">
  <div class="bg-overlay"></div>
  <div class="sk-flow">

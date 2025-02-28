@@ -26,6 +26,14 @@
                         required>
                 </div>
 
+                <div class="mb-3">
+                    <label for="tagInput" class="form-label">Thẻ bài viết</label>
+                    <input type="text" id="tagInput" class="form-control" data-role="tagsinput">
+                    <!-- Hidden input field to store tags -->
+                    <input type="hidden" name="tags" id="hiddenTags">
+                    <div id="tagContainer" class="mt-2"></div>
+                </div>
+
                 <!-- Upload new image -->
                 <div class="mb-3">
                     <label for="thumbnail" class="form-label">Tải lên hình ảnh mới</label>

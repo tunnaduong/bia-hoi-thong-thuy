@@ -27,6 +27,25 @@
                         required>
                 </div>
 
+                <div class="mb-3">
+                    <label for="tagInput" class="form-label">Thẻ bài viết</label>
+                    <input type="text" id="tagInput" class="form-control" data-role="tagsinput">
+                    <!-- Hidden input field to store tags -->
+                    <input type="hidden" name="tags" id="hiddenTags">
+                    <input type="hidden" name="existing_tags" value="{{ $post->tags }}">
+                    <div id="tagContainer" class="mt-2">
+                        @if (isset($post->tags))
+                            @foreach (explode(',', $post->tags) as $tag)
+                                <span class="badge bg-primary me-1">
+                                    {{ $tag }}
+                                    <span class="ms-1" style="cursor:pointer;"
+                                        onclick="removeTag(this, '{{ $tag }}')">&times;</span>
+                                </span>
+                            @endforeach
+                        @endif
+                    </div>
+                </div>
+
                 <!-- Upload new image -->
                 <div class="mb-3">
                     <label for="thumbnail" class="form-label">Tải lên hình ảnh mới</label>

@@ -28,6 +28,7 @@ class PostController extends BaseController
             $title = $_POST['title'] ?? '';
             $content = $_POST['content'] ?? '';
             $slug = $_POST['slug'] ?? NULL;
+            $tags = !empty($_POST['tags']) ? $_POST['tags'] : null;
 
             if (!empty($_FILES['thumbnail']['name'])) { // Check if files were uploaded
                 $imagePath = $this->uploadFile($_FILES['thumbnail'], 'posts');
@@ -37,6 +38,7 @@ class PostController extends BaseController
                 'title' => $title,
                 'content' => $content,
                 'slug' => $slug,
+                'tags' => $tags,
                 'thumbnail' => $imagePath ?? null,
                 'created_at' => date('Y-m-d H:i:s')
             ]);
@@ -58,6 +60,7 @@ class PostController extends BaseController
             $title = $_POST['title'] ?? '';
             $content = $_POST['content'] ?? '';
             $slug = $_POST['slug'] ?? '';
+            $tags = !empty($_POST['tags']) ? $_POST['tags'] : null;
             $existingImage = $_POST['existing_image'] ?? '';
 
             if (!empty($_FILES['thumbnail']['name'])) { // Check if files were uploaded
@@ -70,6 +73,7 @@ class PostController extends BaseController
                 'title' => $title,
                 'content' => $content,
                 'slug' => $slug,
+                'tags' => $tags,
                 'thumbnail' => $imagePath,
                 'updated_at' => date('Y-m-d H:i:s')
             ]);

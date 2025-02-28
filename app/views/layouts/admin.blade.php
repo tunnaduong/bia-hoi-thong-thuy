@@ -88,6 +88,57 @@
         </div>
     </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const tagInput = document.getElementById("tagInput");
+            const tagContainer = document.getElementById("tagContainer");
+            const hiddenTags = document.getElementById("hiddenTags");
+            let tags = [];
+
+            // Load existing tags
+            let existingTags = document.querySelector('input[name="existing_tags"]').value;
+            if (existingTags.trim() !== "") {
+                tags = existingTags.split(',').map(tag => tag.trim());
+                updateTagDisplay();
+            }
+
+            tagInput.addEventListener("keypress", function(event) {
+                if (event.key === "Enter" && tagInput.value.trim() !== "") {
+                    event.preventDefault();
+                    const tagText = tagInput.value.trim();
+
+                    // Prevent duplicate tags
+                    if (!tags.includes(tagText)) {
+                        tags.push(tagText);
+                        updateTagDisplay();
+                    }
+                    tagInput.value = "";
+                }
+            });
+
+            // Remove tag function
+            window.removeTag = function(element, tagText) {
+                tags = tags.filter(tag => tag !== tagText);
+                updateTagDisplay();
+            };
+
+            // Update the UI and hidden input field
+            function updateTagDisplay() {
+                tagContainer.innerHTML = ""; // Clear tags
+                tags.forEach(tag => {
+                    const tagElement = document.createElement("span");
+                    tagElement.className = "badge bg-primary me-1";
+                    tagElement.innerHTML =
+                        `${tag} <span class="ms-1" style="cursor:pointer;" onclick="removeTag(this, '${tag}')">&times;</span>`;
+                    tagContainer.appendChild(tagElement);
+                });
+
+                // Update hidden input for form submission
+                hiddenTags.value = tags.join(",");
+            }
+        });
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

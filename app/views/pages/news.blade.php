@@ -16,31 +16,31 @@
         </div>
     </section>
     <section class="bg-light p-3">
-        <article class="article-item clearfix">
-            <div class="row">
-                <div class="col-4">
-                    <div class="inner-image">
-                        <a href="/cach-u-uop-va-su-dung-bia-hoi-ha-noi-hieu-qua-cho-nha-hang-quan-an"
-                            title="Cách Ủ Uớp Và Sử Dụng Bia Hơi Hà Nội Chuẩn Cho Nhà Hàng, Quán Ăn">
-                            <img class="img-fluid" alt="Cách Ủ Uớp Và Sử Dụng Bia Hơi Hà Nội Chuẩn Cho Nhà Hàng, Quán Ăn"
-                                src="https://cdn0704.cdn4s.com/thumbs/z5051731694236_ed5952e4f369047c289e931bb8a62111_thumb_350.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-8">
-                    <div class="inner-content">
-                        <h4 class="article-title">
-                            <a href="/cach-u-uop-va-su-dung-bia-hoi-ha-noi-hieu-qua-cho-nha-hang-quan-an">Cách Ủ Uớp Và Sử
-                                Dụng Bia Hơi Hà Nội ...</a>
-                        </h4>
-                        <div class="article-entry-info">
-                            <span class="post-date">01/02/2024</span>
-                        </div>
-                        <div class="article-description"> Cách Ủ Uớp Và Sử Dụng Bia Hơi Hà Nội Chuẩn Cho Nhà Hàng, Quán Ăn
+        @foreach ($posts as $post)
+            <article class="article-item clearfix">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="inner-image">
+                            <a href="{{ route('tin-tuc/' . $post->slug) }}" title="{{ $post->title }}">
+                                <img class="img-fluid" alt="{{ $post->title }}" src="{{ asset($post->thumbnail) }}">
+                            </a>
                         </div>
                     </div>
+                    <div class="col-8">
+                        <div class="inner-content">
+                            <h4 class="article-title">
+                                <a href="{{ route('tin-tuc/' . $post->slug) }}">{{ truncateText($post->title, 60) }}</a>
+                            </h4>
+                            <div class="article-entry-info">
+                                <span class="post-date">{{ formatVietnameseDate($post->created_at) }}</span>
+                            </div>
+                            <div class="article-description">
+                                {{ truncateText(stripTagsKeepUtf8($post->content)) }}
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </article>
+            </article>
+        @endforeach
     </section>
 @endsection

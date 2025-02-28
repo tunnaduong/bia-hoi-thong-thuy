@@ -10,22 +10,31 @@ class HomeController extends BaseController
 {
     public function index()
     {
-        $this->render("pages.home");
+        return $this->render("pages.home");
     }
 
     public function about()
     {
-        $this->render("pages.about");
+        return $this->render("pages.about");
     }
 
     public function product()
     {
-        $this->render("pages.product");
+        return $this->render("pages.product");
     }
 
     public function news()
     {
-        $this->render("pages.news");
+        $postModel = new \App\Models\PostModel();
+        $posts = $postModel->getAllPosts();
+        return $this->render("pages.news", compact('posts'));
+    }
+
+    public function newsDetail($slug)
+    {
+        $postModel = new \App\Models\PostModel();
+        $post = $postModel->getPostBySlug($slug);
+        return $this->render("pages.newsDetail", compact('post'));
     }
 
     public function contact()
@@ -39,7 +48,7 @@ class HomeController extends BaseController
             header('Location: /login');
             exit;
         }
-        $this->render("admin.index", ['section' => 'home']);
+        return $this->render("admin.index", ['section' => 'home']);
     }
 
     public function login()

@@ -17,6 +17,8 @@ try {
 
     $router->get('/tin-tuc', [App\Controllers\HomeController::class, 'news']);
 
+    $router->get('/tin-tuc/{slug}', [App\Controllers\HomeController::class, 'newsDetail']);
+
     $router->get('/lien-he', [App\Controllers\HomeController::class, 'contact']);
 
     $router->post('/contact/send-info', [App\Controllers\HomeController::class, 'sendMail']);
