@@ -17,6 +17,7 @@
                         <th>Ảnh đại diện</th>
                         <th>Tiêu đề</th>
                         <th>Tạo lúc</th>
+                        <th>Cập nhật lúc</th>
                         <th>Hành động</th>
                     </tr>
                 </thead>
@@ -32,6 +33,7 @@
                             </td>
                             <td>{{ $post->title }}</td>
                             <td>{{ $post->created_at }}</td>
+                            <td>{{ $post->updated_at }}</td>
                             <td>
                                 <a href="/admin/manage/posts/edit/{{ $post->id }}" class="btn btn-sm btn-warning">Sửa</a>
                                 <form action="/admin/manage/posts/delete/{{ $post->id }}" method="POST"
