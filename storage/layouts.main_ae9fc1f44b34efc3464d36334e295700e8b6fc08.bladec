@@ -366,6 +366,8 @@
  <script src='/public/bootstrap/bootstrap.min.js'></script>
  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
  <script src='/public/js/script.js'></script>
+ <script src="//instant.page/5.2.0" type="module"
+ integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
 </body>
 
 </html>

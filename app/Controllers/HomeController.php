@@ -115,4 +115,9 @@ class HomeController extends BaseController
         }
         echo json_encode(['code' => 'success', 'message' => 'Gửi mail thành công', 'status' => 200]);
     }
+
+    public function error404($error)
+    {
+        return $this->render("errors.404", compact('error'));
+    }
 }

@@ -6,10 +6,10 @@
             <ol class="breadcrumb flex-grow-1 m-0 ms-2">
                 <li class="breadcrumb-item fw-bold"><a href="/">Trang chủ</a></li>
                 <li class="breadcrumb-item"><a href="/tin-tuc">Tin tức</a></li>
-                <li class="breadcrumb-item active" aria-current="page">{{ truncateText($post->title, 30) }}</li>
+                <li class="breadcrumb-item active" aria-current="page">{{ truncateText($post->title, 29) }}</li>
             </ol>
             <div class="small">
-                <span id="clock" class="small me-3"></span>
+                <span id="clock" class="small me-2"></span>
             </div>
             <script>
                 common.clock(true, 'clock')

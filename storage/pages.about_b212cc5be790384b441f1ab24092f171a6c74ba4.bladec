@@ -8,7 +8,7 @@
  <li class="breadcrumb-item active" aria-current="page">Giới thiệu</li>
  </ol>
  <div class="small">
- <span id="clock" class="small me-3"></span>
+ <span id="clock" class="small me-2"></span>
  </div>
  <script>
  common.clock(true, 'clock')

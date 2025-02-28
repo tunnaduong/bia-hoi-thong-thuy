@@ -28,6 +28,7 @@ class ProductController extends BaseController
             $name = $_POST['name'] ?? '';
             $description = $_POST['description'] ?? '';
             $short_description = $_POST['short_description'] ?? '';
+            $info = $_POST['info'] ?? '';
 
             // Handle image uploads
             $imagePaths = [];
@@ -37,6 +38,7 @@ class ProductController extends BaseController
 
             $this->productModel->createProduct([
                 'name' => $name,
+                'info' => $info,
                 'description' => $description,
                 'short_description' => $short_description,
                 'images' => json_encode($imagePaths), // Ensure paths are encoded into JSON
@@ -60,6 +62,7 @@ class ProductController extends BaseController
             $name = $_POST['name'] ?? '';
             $description = $_POST['description'] ?? '';
             $short_description = $_POST['short_description'] ?? '';
+            $info = $_POST['info'] ?? '';
 
             $product = $this->productModel->getProductById($id);
 
@@ -77,6 +80,7 @@ class ProductController extends BaseController
 
             $this->productModel->updateProduct($id, [
                 'name' => $name,
+                'info' => $info,
                 'short_description' => $short_description,
                 'description' => $description,
                 'images' => json_encode($imagePaths), // Ensure paths are encoded into JSON

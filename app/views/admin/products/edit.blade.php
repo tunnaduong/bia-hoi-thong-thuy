@@ -22,6 +22,11 @@
                 </div>
 
                 <div class="mb-3">
+                    <label for="short_description" class="form-label">Thông tin sản phẩm</label>
+                    <textarea class="form-control" id="info" name="info" rows="3" required>{{ $product->info }}</textarea>
+                </div>
+
+                <div class="mb-3">
                     <label for="description" class="form-label">Mô tả chi tiết</label>
                     <textarea class="form-control" id="description" name="description" rows="3" required>{{ $product->description }}</textarea>
                 </div>
@@ -71,7 +76,7 @@
         </div>
     </div>
     <script>
-        CKEDITOR.replace('short_description');
+        CKEDITOR.replace('info');
         CKEDITOR.replace('description');
     </script>
 @endsection

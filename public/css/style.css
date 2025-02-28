@@ -32,6 +32,8 @@ a {
 
 .small {
   font-size: 0.875em;
+  min-width: 160px;
+  text-align: right;
 }
 
 .click-register {

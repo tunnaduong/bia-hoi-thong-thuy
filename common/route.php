@@ -65,6 +65,6 @@ try {
     // Print out the value returned from the dispatched function
     echo $response;
 } catch (Exception $e) {
-    var_dump($e->getMessage());
+    (new \App\Controllers\HomeController)->error404($e->getMessage());
     die;
 }
