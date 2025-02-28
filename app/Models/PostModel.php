@@ -18,20 +18,24 @@ class PostModel extends BaseModel
 
     public function createPost($data)
     {
-        $this->setQuery("INSERT INTO news_posts (title, content, created_at) VALUES (?, ?, ?)");
+        $this->setQuery("INSERT INTO news_posts (title, content, slug, thumbnail, created_at) VALUES (?, ?, ?, ?, ?)");
         return $this->execute([
             $data['title'],
             $data['content'],
+            $data['slug'],
+            $data['thumbnail'],
             $data['created_at']
         ]);
     }
 
     public function updatePost($id, $data)
     {
-        $this->setQuery("UPDATE news_posts SET title = ?, content = ?, updated_at = ? WHERE id = ?");
+        $this->setQuery("UPDATE news_posts SET title = ?, content = ?, slug = ?, thumbnail = ?, updated_at = ? WHERE id = ?");
         return $this->execute([
             $data['title'],
             $data['content'],
+            $data['slug'],
+            $data['thumbnail'],
             $data['updated_at'],
             $id
         ]);

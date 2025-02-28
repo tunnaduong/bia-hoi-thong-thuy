@@ -27,10 +27,17 @@ class PostController extends BaseController
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $title = $_POST['title'] ?? '';
             $content = $_POST['content'] ?? '';
+            $slug = $_POST['slug'] ?? NULL;
+
+            if (!empty($_FILES['thumbnail']['name'])) { // Check if files were uploaded
+                $imagePath = $this->uploadFile($_FILES['thumbnail'], 'posts');
+            }
 
             $this->postModel->createPost([
                 'title' => $title,
                 'content' => $content,
+                'slug' => $slug,
+                'thumbnail' => $imagePath ?? null,
                 'created_at' => date('Y-m-d H:i:s')
             ]);
 
@@ -50,10 +57,20 @@ class PostController extends BaseController
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $title = $_POST['title'] ?? '';
             $content = $_POST['content'] ?? '';
+            $slug = $_POST['slug'] ?? '';
+            $existingImage = $_POST['existing_image'] ?? '';
+
+            if (!empty($_FILES['thumbnail']['name'])) { // Check if files were uploaded
+                $imagePath = $this->uploadFile($_FILES['thumbnail'], 'posts');
+            } else {
+                $imagePath = $existingImage;
+            }
 
             $this->postModel->updatePost($id, [
                 'title' => $title,
                 'content' => $content,
+                'slug' => $slug,
+                'thumbnail' => $imagePath,
                 'updated_at' => date('Y-m-d H:i:s')
             ]);
 
