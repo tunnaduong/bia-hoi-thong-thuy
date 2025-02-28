@@ -52,7 +52,7 @@ class HomeController extends BaseController
             $username = $_POST['username'] ?? '';
             $password = $_POST['password'] ?? '';
 
-            if ($username === 'admin' && $password === 'tunganh2003') {
+            if ($username === ADMIN_USERNAME && $password === ADMIN_PASSWORD) {
                 $_SESSION['user'] = [
                     'username' => $username
                 ];

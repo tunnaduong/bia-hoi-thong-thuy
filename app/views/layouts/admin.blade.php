@@ -48,7 +48,7 @@
             <!-- Sidebar -->
             <div class="col-md-3 col-lg-2 px-0 bg-white sidebar">
                 <div class="d-flex flex-column p-3">
-                    <h5 class="text-center mb-4 py-2 border-bottom">Admin Dashboard</h5>
+                    <h5 class="text-center mb-4 py-2 border-bottom">Trang quản trị</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a href="/admin"
@@ -61,14 +61,14 @@
                             <a href="/admin/manage/posts"
                                 class="nav-link {{ isset($section) && $section === 'posts' ? 'active' : '' }}">
                                 <i class="bi bi-file-text"></i>
-                                Posts
+                                Quản lý bài viết
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="/admin/manage/products"
                                 class="nav-link {{ isset($section) && $section === 'products' ? 'active' : '' }}">
                                 <i class="bi bi-box"></i>
-                                Products
+                                Quản lý sản phẩm
                             </a>
                         </li>
                         <li class="nav-item">
