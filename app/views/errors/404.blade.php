@@ -25,7 +25,7 @@
         <a href="/">Trang chủ</a>
     </center>
     <script>
-        console.log("Error from PHP: {{ $error }}");
+        console.log("Error from PHP: {!! $error !!}");
     </script>
 </body>
 

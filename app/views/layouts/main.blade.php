@@ -291,7 +291,7 @@
                         <p><a href="/gioi-thieu" class="text-white">Giới thiệu</a></p>
                         <p><a href="/san-pham" class="text-white">Sản phẩm</a></p>
                         <p><a href="/tin-tuc" class="text-white">Tin tức</a></p>
-                        <p>Liên hệ</p>
+                        <p><a href="/lien-he" class="text-white">Liên hệ</a></p>
                     </div>
                 </div>
                 <div class="col-12">
@@ -300,8 +300,8 @@
                         <div>
                             <div class="border-bottom border-3 border-warning my-3 w-50"></div>
                         </div>
-                        <p><a href="/lien-he-mo-dai-ly-64.shtml" class="text-white">Liên hệ mở đại lý</a></p>
-                        <p><a href="/co-che-hop-tac-65.shtml" class="text-white">Cơ chế hợp tác</a></p>
+                        <p><a href="/lien-he" class="text-white">Liên hệ mở đại lý</a></p>
+                        <p><a href="/tin-tuc/co-che-hop-tac" class="text-white">Cơ chế hợp tác</a></p>
                         <iframe width="100%" height="100%"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d933.6231726850094!2d105.84831945598124!3d20.608765078457722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135cd851a73260d%3A0xbed3016d810fe197!2zTmjDoCBjdW5nIGPhuqVwIGJpYSBoxqFpIEjDoCBO4buZaSBUaMO0bmcgVGh14bu3!5e0!3m2!1svi!2shk!4v1739804320336!5m2!1svi!2shk"
                             style="border:0;margin-bottom: 15px" allowfullscreen="" loading="lazy"

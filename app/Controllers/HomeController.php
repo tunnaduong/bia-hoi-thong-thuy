@@ -22,7 +22,9 @@ class HomeController extends BaseController
 
     public function product()
     {
-        return $this->render("pages.product");
+        $productModel = new \App\Models\ProductModel();
+        $products = $productModel->getAllProducts();
+        return $this->render("pages.product", compact('products'));
     }
 
     public function news()
@@ -36,6 +38,9 @@ class HomeController extends BaseController
     {
         $postModel = new \App\Models\PostModel();
         $post = $postModel->getPostBySlug($slug);
+        if (!$post) {
+            return $this->error404('Bài viết không tồn tại');
+        }
         return $this->render("pages.newsDetail", compact('post'));
     }
 
