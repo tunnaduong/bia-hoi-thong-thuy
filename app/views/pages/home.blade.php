@@ -93,7 +93,7 @@
                                 <small>{{ formatVietnameseDate($product->created_at) }} | 0 lượt xem</small>
                             </div>
                             <p class="card-text mb-auto text-end">
-                                <a class="fst-italic small" href="/bia-hoi-ha-noi-89-habeco-trading-89-281.html">Xem chi
+                                <a class="fst-italic small" href="{{ route('san-pham/' . $product->slug) }}">Xem chi
                                     tiết</a>
                             </p>
                         </div>
