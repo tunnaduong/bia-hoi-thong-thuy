@@ -88,7 +88,7 @@
                             <h5>
                                 <a href="{{ route('san-pham/' . $product->slug) }}">{{ $product->name }}</a>
                             </h5>
-                            <p class="fst-italic">{{ $product->short_descr     iption }}</p>
+                            <p class="fst-italic">{{ $product->short_description }}</p>
                             <div class="mb-1 text-muted small">
                                 <small>{{ formatVietnameseDate($product->created_at) }} | 0 lượt xem</small>
                             </div>
