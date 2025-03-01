@@ -29,6 +29,7 @@ class ProductController extends BaseController
             $description = $_POST['description'] ?? '';
             $short_description = $_POST['short_description'] ?? '';
             $info = $_POST['info'] ?? '';
+            $slug = $_POST['slug'] ?? '';
 
             // Handle image uploads
             $imagePaths = [];
@@ -41,6 +42,7 @@ class ProductController extends BaseController
                 'info' => $info,
                 'description' => $description,
                 'short_description' => $short_description,
+                'slug' => $slug,
                 'images' => json_encode($imagePaths), // Ensure paths are encoded into JSON
                 'created_at' => date('Y-m-d H:i:s')
             ]);
@@ -63,6 +65,7 @@ class ProductController extends BaseController
             $description = $_POST['description'] ?? '';
             $short_description = $_POST['short_description'] ?? '';
             $info = $_POST['info'] ?? '';
+            $slug = $_POST['slug'] ?? '';
 
             $product = $this->productModel->getProductById($id);
 
@@ -83,6 +86,7 @@ class ProductController extends BaseController
                 'info' => $info,
                 'short_description' => $short_description,
                 'description' => $description,
+                'slug' => $slug,
                 'images' => json_encode($imagePaths), // Ensure paths are encoded into JSON
                 'updated_at' => date('Y-m-d H:i:s')
             ]);

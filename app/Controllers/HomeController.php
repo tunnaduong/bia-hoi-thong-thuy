@@ -10,7 +10,9 @@ class HomeController extends BaseController
 {
     public function index()
     {
-        return $this->render("pages.home");
+        $productModel = new \App\Models\ProductModel();
+        $products = $productModel->getAllProducts();
+        return $this->render("pages.home", compact('products'));
     }
 
     public function about()

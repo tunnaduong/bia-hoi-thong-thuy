@@ -31,6 +31,12 @@
                     <textarea class="form-control" id="description" name="description" rows="3" required>{{ $product->description }}</textarea>
                 </div>
 
+                <div class="mb-3">
+                    <label for="slug" class="form-label">Slug</label>
+                    <input type="text" class="form-control" id="slug" name="slug" value="{{ $product->slug }}"
+                        required>
+                </div>
+
                 <!-- Show existing images with delete buttons -->
                 <div class="mb-3">
                     <label class="form-label">Ảnh hiện tại</label>
