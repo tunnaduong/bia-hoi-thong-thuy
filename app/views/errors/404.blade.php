@@ -15,7 +15,7 @@
 
 <body>
     <center style="margin-top: 100px;">
-        <img src="{{ asset('/public/images/404.png') }}" alt="404">
+        <img src="{{ asset('/public/images/404.png') }}" alt="404" style="max-width: 100%">
         <p>
             Thật tiếc trang của bạn yêu cầu không tồn tại.<br>
             Vui lòng thử một trang khác hoặc liên hệ trực tiếp với <a href="https://fb.me/fattiesoftware">Fatties
