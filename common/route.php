@@ -15,6 +15,8 @@ try {
 
     $router->get('/san-pham', [App\Controllers\HomeController::class, 'product']);
 
+    $router->get('/san-pham/{slug}', [App\Controllers\HomeController::class, 'productDetail']);
+
     $router->get('/tin-tuc', [App\Controllers\HomeController::class, 'news']);
 
     $router->get('/tin-tuc/{slug}', [App\Controllers\HomeController::class, 'newsDetail']);

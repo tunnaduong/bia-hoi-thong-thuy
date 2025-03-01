@@ -16,6 +16,12 @@ class ProductModel extends BaseModel
         return $this->loadRow([$id]);
     }
 
+    public function getProductBySlug($slug)
+    {
+        $this->setQuery("SELECT * FROM products WHERE slug = ?");
+        return $this->loadRow([$slug]);
+    }
+
     public function createProduct($data)
     {
         $this->setQuery("INSERT INTO products (name, info, short_description, description, slug, images, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)");
