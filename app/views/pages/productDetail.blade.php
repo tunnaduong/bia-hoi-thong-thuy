@@ -6,7 +6,7 @@
             <ol class="breadcrumb flex-grow-1 m-0 ms-2">
                 <li class="breadcrumb-item fw-bold"><a href="/">Trang chủ</a></li>
                 <li class="breadcrumb-item"><a href="/san-pham">Sản phẩm</a></li>
-                <li class="breadcrumb-item active" aria-current="page">{{ truncateText($product->name, 29) }}</li>
+                <li class="breadcrumb-item active" aria-current="page">{{ truncateText($product->name, 25) }}</li>
             </ol>
             <div class="small">
                 <span id="clock" class="small me-2"></span>
