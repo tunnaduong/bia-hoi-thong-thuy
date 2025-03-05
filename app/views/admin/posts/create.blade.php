@@ -49,6 +49,18 @@
         </div>
     </div>
     <script>
-        CKEDITOR.replace('content');
+        CKEDITOR.replace('content', {
+            on: {
+                instanceReady: function(ev) {
+                    this.dataProcessor.htmlFilter.addRules({
+                        elements: {
+                            table: function(element) {
+                                element.addClass('table table-striped');
+                            }
+                        }
+                    });
+                }
+            }
+        });
     </script>
 @endsection

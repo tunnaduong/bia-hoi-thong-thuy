@@ -35,7 +35,7 @@
         <img src="/public/images/biahoi.jpg" alt="Bia hơi" class="w-100 h-100 d-block m-auto mb-4" />
         <p>Tên: Tổng Đại Lý Bia Hơi Thông Thủy</p>
 
-        <p>Địa chỉ: Tân Sơn, Kim Bảng, Hà Nam.</p>
+        <p>Địa chỉ: Phường Tân Sơn, Thị xã Kim Bảng, Tỉnh Hà Nam.</p>
 
         <p>Năm Thành Lập: 1998</p>
 
