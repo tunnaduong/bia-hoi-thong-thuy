@@ -103,6 +103,12 @@ a {
   border-bottom: 1px solid #e3e3e3;
 }
 
+.article-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
 .inner-image {
   overflow: hidden;
   position: relative;
@@ -131,6 +137,96 @@ a {
 .article-description {
   margin-bottom: 10px;
   font-size: 15px;
+}
+
+.product-title {
+  font-weight: 700;
+  color: #13653b;
+  font-size: 24px;
+  margin-bottom: 5px;
+  margin-top: 1rem;
+}
+
+.product-short-description {
+  margin-top: -1rem;
+}
+
+.btn-phone {
+  background: red;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn-call {
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+.btn-zalo {
+  background: #288ad6;
+  font-size: 12px;
+}
+
+.btn-zalo span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn-call span {
+  display: block;
+}
+
+.btn-phone span {
+  font-size: 12px;
+  font-weight: initial;
+}
+
+.product-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 5px;
+  margin-top: 15px;
+}
+
+.product-cta > div {
+  flex: 1;
+}
+
+.product-section-title {
+  font-weight: 700;
+  color: #13653b;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.product-section-title span {
+  position: relative;
+}
+
+.product-section-title span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: -13px;
+  background-color: #13653b;
+}
+
+.product-description-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 20px;
 }
 
 @keyframes sk-flow {
