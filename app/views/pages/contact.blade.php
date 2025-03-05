@@ -1,4 +1,4 @@
-@extends('layouts.main', ['contact' => 'active'])
+@extends('layouts.main', ['contact' => 'active', 'title' => 'Liên hệ'])
 
 @section('content')
     <section class="py-3">

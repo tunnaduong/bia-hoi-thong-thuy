@@ -2,7 +2,11 @@
 <html lang="en">
 
 <head>
- <?php echo $this->runChild('components.head'); ?>
+ <?php echo $this->runChild('components.head', [
+ 'tags' => $tags ?? null,
+ 'thumbnail' => $thumbnail ?? null,
+ 'title' => $title ?? null,
+ ]); ?>
 </head>
 
 <body>

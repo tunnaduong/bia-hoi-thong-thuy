@@ -44,4 +44,4 @@
  </section>
 <?php $this->stopSection(); ?>
 
-<?php if (isset($_shouldextend[1])) { echo $this->runChild('layouts.main', ['about' => 'active']); } ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layouts.main', ['about' => 'active', 'title' => 'Giới thiệu']); } ?>

@@ -47,4 +47,4 @@
  </section>
 <?php $this->stopSection(); ?>
 
-<?php if (isset($_shouldextend[1])) { echo $this->runChild('layouts.main', ['news' => 'active']); } ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layouts.main', ['news' => 'active', 'title' => 'Tin tức']); } ?>

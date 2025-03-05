@@ -75,4 +75,4 @@
  </section>
 <?php $this->stopSection(); ?>
 
-<?php if (isset($_shouldextend[1])) { echo $this->runChild('layouts.main', ['contact' => 'active']); } ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layouts.main', ['contact' => 'active', 'title' => 'Liên hệ']); } ?>

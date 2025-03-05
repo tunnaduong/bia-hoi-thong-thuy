@@ -1,4 +1,9 @@
-@extends('layouts.main', ['news' => 'active'])
+@extends('layouts.main', [
+    'news' => 'active',
+    'tags' => $post->tags,
+    'thumbnail' => asset($post->thumbnail),
+    'title' => $post->title,
+])
 
 @section('content')
     <section class="py-3">

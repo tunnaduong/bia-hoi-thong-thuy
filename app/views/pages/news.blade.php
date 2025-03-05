@@ -1,4 +1,4 @@
-@extends('layouts.main', ['news' => 'active'])
+@extends('layouts.main', ['news' => 'active', 'title' => 'Tin tức'])
 
 @section('content')
     <section class="py-3">

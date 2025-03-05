@@ -2,7 +2,11 @@
 <html lang="en">
 
 <head>
-    @include('components.head')
+    @include('components.head', [
+        'tags' => $tags ?? null,
+        'thumbnail' => $thumbnail ?? null,
+        'title' => $title ?? null,
+    ])
 </head>
 
 <body>

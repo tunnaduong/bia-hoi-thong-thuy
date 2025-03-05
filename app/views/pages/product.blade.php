@@ -1,4 +1,4 @@
-@extends('layouts.main', ['product' => 'active'])
+@extends('layouts.main', ['product' => 'active', 'title' => 'Sản phẩm'])
 
 @section('content')
     <section class="py-3">
