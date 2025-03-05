@@ -76,4 +76,8 @@
  <script src="/public/js/product.js"></script>
 <?php $this->stopSection(); ?>
 
-<?php if (isset($_shouldextend[1])) { echo $this->runChild('layouts.main', ['product' => 'active']); } ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layouts.main', [
+ 'product' => 'active',
+ 'title' => $product->name,
+ 'thumbnail' => asset(json_decode($product->images)[0]),
+]); } ?>

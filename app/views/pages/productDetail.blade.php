@@ -1,4 +1,8 @@
-@extends('layouts.main', ['product' => 'active', 'title' => $product->name])
+@extends('layouts.main', [
+    'product' => 'active',
+    'title' => $product->name,
+    'thumbnail' => asset(json_decode($product->images)[0]),
+])
 
 @section('content')
     <section class="py-3">
