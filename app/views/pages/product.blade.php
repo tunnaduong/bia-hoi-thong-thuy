@@ -31,7 +31,8 @@
                     <div class="card-text w-100">
                         <h6 class="card-text"><a href="{{ route('san-pham/' . $product->slug) }}">{{ $product->name }}</a>
                         </h6>
-                        <p class="small"><small>0 lượt xem | {{ formatVietnameseDate($product->created_at) }}</small></p>
+                        <p class="small"><small>{{ $product->views }} lượt xem |
+                                {{ formatVietnameseDate($product->created_at) }}</small></p>
                     </div>
                 </div>
             </div>

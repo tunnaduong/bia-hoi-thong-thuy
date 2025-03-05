@@ -12,6 +12,11 @@ class HomeController extends BaseController
     {
         $productModel = new \App\Models\ProductModel();
         $products = $productModel->getAllProducts();
+        $viewModel = new \App\Models\ViewCount();
+        foreach ($products as $product) {
+            $views = $viewModel->getViewCountForProduct($product->id);
+            $product->views = $views->views;
+        }
         return $this->render("pages.home", compact('products'));
     }
 
@@ -24,6 +29,11 @@ class HomeController extends BaseController
     {
         $productModel = new \App\Models\ProductModel();
         $products = $productModel->getAllProducts();
+        $viewModel = new \App\Models\ViewCount();
+        foreach ($products as $product) {
+            $views = $viewModel->getViewCountForProduct($product->id);
+            $product->views = $views->views;
+        }
         return $this->render("pages.product", compact('products'));
     }
 
@@ -34,6 +44,8 @@ class HomeController extends BaseController
         if (!$product) {
             return $this->error404('Sản phẩm không tồn tại');
         }
+        $viewModel = new \App\Models\ViewCount();
+        $viewModel->incrementViewCountForProduct($product->id);
         return $this->render("pages.productDetail", compact('product'));
     }
 
@@ -41,6 +53,11 @@ class HomeController extends BaseController
     {
         $postModel = new \App\Models\PostModel();
         $posts = $postModel->getAllPosts();
+        $viewModel = new \App\Models\ViewCount();
+        foreach ($posts as $post) {
+            $views = $viewModel->getViewCountForPost($post->id);
+            $post->views = $views->views;
+        }
         return $this->render("pages.news", compact('posts'));
     }
 
@@ -51,6 +68,10 @@ class HomeController extends BaseController
         if (!$post) {
             return $this->error404('Bài viết không tồn tại');
         }
+        $viewModel = new \App\Models\ViewCount();
+        $viewModel->incrementViewCountForPost($post->id);
+        $views = $viewModel->getViewCountForPost($post->id);
+        $post->views = $views->views;
         return $this->render("pages.newsDetail", compact('post'));
     }
 

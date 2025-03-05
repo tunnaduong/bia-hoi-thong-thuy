@@ -56,7 +56,7 @@
             <h2 style="color: #13653b;" class="border-bottom pb-3">{{ $post->title }}</h2>
             <div class="article-entry-info">
                 <span class="post-date">{{ formatVietnameseDate($post->created_at) }}</span>
-                <span> | 348 lượt xem</span>
+                <span> | {{ $post->views }} lượt xem</span>
             </div>
             <div>
                 {!! $post->content !!}

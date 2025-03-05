@@ -16,6 +16,9 @@
         </div>
     </section>
     <section class="bg-light p-3">
+        <div class="py-3 text-center alert bg-warning-subtle">
+            <h3 class="w-100 text-center fw-bold text-uppercase">Tin tức | Đại lý bia hơi Thông Thủy</h3>
+        </div>
         @foreach ($posts as $post)
             <article class="article-item clearfix">
                 <div class="row">
@@ -32,7 +35,8 @@
                                 <a href="{{ route('tin-tuc/' . $post->slug) }}">{{ truncateText($post->title, 60) }}</a>
                             </h4>
                             <div class="article-entry-info">
-                                <span class="post-date">{{ formatVietnameseDate($post->created_at) }}</span>
+                                <span class="post-date">{{ formatVietnameseDate($post->created_at) }} | {{ $post->views }}
+                                    lượt xem</span>
                             </div>
                             <div class="article-description">
                                 {{ truncateText(stripTagsKeepUtf8($post->content)) }}

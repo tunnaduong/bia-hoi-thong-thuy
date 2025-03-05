@@ -90,7 +90,8 @@
                             </h5>
                             <p class="fst-italic">{{ $product->short_description }}</p>
                             <div class="mb-1 text-muted small">
-                                <small>{{ formatVietnameseDate($product->created_at) }} | 0 lượt xem</small>
+                                <small>{{ formatVietnameseDate($product->created_at) }} | {{ $product->views }} lượt
+                                    xem</small>
                             </div>
                             <p class="card-text mb-auto text-end">
                                 <a class="fst-italic small" href="{{ route('san-pham/' . $product->slug) }}">Xem chi
